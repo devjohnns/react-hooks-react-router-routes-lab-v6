@@ -8,7 +8,7 @@ function Movie() {
   const [movie, setMovie] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:3001/movies")
+    fetch("/movies")
       .then((res) => res.json())
       .then((movies) => {
         const found = movies.find((m) => m.id.toString() === id);
